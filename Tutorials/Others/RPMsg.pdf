@@ -1,0 +1,936 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 6 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+5 0 obj
+<<
+/Contents 19 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+>>
+endobj
+7 0 obj
+<<
+/Contents 20 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/Contents 21 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+9 0 obj
+<<
+/Contents 22 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+10 0 obj
+<<
+/Contents 23 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+11 0 obj
+<<
+/Outlines 13 0 R /PageLabels 24 0 R /PageMode /UseNone /Pages 18 0 R /Type /Catalog
+>>
+endobj
+12 0 obj
+<<
+/Author () /CreationDate (D:20200228171721+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20200228171721+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Remote Processor Messaging \(rpmsg\) Framework) /Trapped /False
+>>
+endobj
+13 0 obj
+<<
+/Count 4 /First 14 0 R /Last 17 0 R /Type /Outlines
+>>
+endobj
+14 0 obj
+<<
+/Dest [ 5 0 R /XYZ 62.69291 594.0236 0 ] /Next 15 0 R /Parent 13 0 R /Title (Introduction)
+>>
+endobj
+15 0 obj
+<<
+/Dest [ 7 0 R /XYZ 62.69291 765.0236 0 ] /Next 16 0 R /Parent 13 0 R /Prev 14 0 R /Title (User API)
+>>
+endobj
+16 0 obj
+<<
+/Dest [ 9 0 R /XYZ 62.69291 491.4236 0 ] /Next 17 0 R /Parent 13 0 R /Prev 15 0 R /Title (Typical usage)
+>>
+endobj
+17 0 obj
+<<
+/Dest [ 10 0 R /XYZ 62.69291 426.8236 0 ] /Parent 13 0 R /Prev 16 0 R /Title (Allocations of rpmsg channels)
+>>
+endobj
+18 0 obj
+<<
+/Count 5 /Kids [ 5 0 R 7 0 R 8 0 R 9 0 R 10 0 R ] /Type /Pages
+>>
+endobj
+19 0 obj
+<<
+/Length 5289
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 717.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 28 Tm /F2 20 Tf 24 TL 52.12488 0 Td (Remote Processor Messaging \(rpmsg\)) Tj T* 129.47 0 Td (Framework) Tj T* -181.5949 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.0236 cm
+Q
+q
+1 0 0 1 62.69291 612.0236 cm
+.960784 .960784 .862745 rg
+n 0 83 469.8898 -83 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 57 Tm  T* ET
+q
+1 0 0 1 16 52 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F3 12.5 Tf 15 TL (Note) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 16 cm
+q
+BT 1 0 0 1 0 14 Tm 1.73311 Tw 12 TL /F1 10 Tf 0 0 0 rg (This document describes the rpmsg bus and how to write rpmsg drivers. To learn how to add) Tj T* 0 Tw (rpmsg support for new platforms, check out remoteproc.txt \(also a resident of Documentation/\).) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 83 m 469.8898 83 l S
+n 0 0 m 469.8898 0 l S
+n 0 0 m 0 83 l S
+n 469.8898 0 m 469.8898 83 l S
+Q
+Q
+q
+1 0 0 1 62.69291 606.0236 cm
+Q
+q
+1 0 0 1 62.69291 573.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Introduction) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 531.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.196976 Tw (Modern SoCs typically employ heterogeneous remote processor devices in asymmetric multiprocessing) Tj T* 0 Tw .39784 Tw (\(AMP\) configurations, which may be running different instances of operating system, whether it's Linux or) Tj T* 0 Tw (any other flavor of real-time OS.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 489.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 3.094983 Tw (OMAP4, for example, has dual Cortex-A9, dual Cortex-M3 and a C64x+ DSP. Typically, the dual) Tj T* 0 Tw .245777 Tw (cortex-A9 is running Linux in a SMP configuration, and each of the other three cores \(two M3 cores and a) Tj T* 0 Tw (DSP\) is running its own instance of RTOS in an AMP configuration.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 447.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .632706 Tw (Typically AMP remote processors employ dedicated DSP codecs and multimedia hardware accelerators,) Tj T* 0 Tw 3.18229 Tw (and therefore are often used to offload CPU-intensive multimedia tasks from the main application) Tj T* 0 Tw (processor.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 417.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .276905 Tw (These remote processors could also be used to control latency-sensitive sensors, drive random hardware) Tj T* 0 Tw (blocks, or just perform background tasks while the main CPU is idling.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 375.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .93284 Tw (Users of those remote processors can either be userland apps \(e.g. multimedia frameworks talking with) Tj T* 0 Tw 3.960814 Tw (remote OMX components\) or kernel drivers \(controlling hardware accessible only by the remote) Tj T* 0 Tw (processor, reserving kernel-controlled resources on behalf of the remote processor, etc..\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 345.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .219983 Tw (Rpmsg is a virtio-based messaging bus that allows kernel drivers to communicate with remote processors) Tj T* 0 Tw (available on the system. In turn, drivers could then expose appropriate user space interfaces, if needed.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 231.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 98 Tm /F1 10 Tf 12 TL 1.054651 Tw (When writing a driver that exposes rpmsg communication to userland, please keep in mind that remote) Tj T* 0 Tw 2.31152 Tw (processors might have direct access to the system's physical memory and other sensitive hardware) Tj T* 0 Tw 2.241412 Tw (resources \(e.g. on OMAP4, remote cores and hardware accelerators may have direct access to the) Tj T* 0 Tw 1.599147 Tw (physical memory, gpio banks, dma controllers, i2c bus, gptimers, mailbox devices, hwspinlocks, etc..\).) Tj T* 0 Tw 2.043555 Tw (Moreover, those remote processors might be running RTOS where every task can access the entire) Tj T* 0 Tw 2.083555 Tw (memory/devices exposed to the processor. To minimize the risks of rogue \(or buggy\) userland code) Tj T* 0 Tw .568876 Tw (exploiting remote bugs, and by that taking over the system, it is often desired to limit userland to specific) Tj T* 0 Tw 1.721984 Tw (rpmsg channels \(see definition below\) it can send messages on, and if possible, minimize how much) Tj T* 0 Tw (control it has over the content of the messages.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 189.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .537984 Tw (Every rpmsg device is a communication channel with a remote processor \(thus rpmsg devices are called) Tj T* 0 Tw 1.579984 Tw (channels\). Channels are identified by a textual name and have a local \("source"\) rpmsg address, and) Tj T* 0 Tw (remote \("destination"\) rpmsg address.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 135.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL .481567 Tw (When a driver starts listening on a channel, its rx callback is bound with a unique rpmsg local address \(a) Tj T* 0 Tw 3.31284 Tw (32-bit integer\). This way when inbound messages arrive, the rpmsg core dispatches them to the) Tj T* 0 Tw .963984 Tw (appropriate driver according to their destination address \(this is done by invoking the driver's rx handler) Tj T* 0 Tw (with the payload of the inbound message\).) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+20 0 obj
+<<
+/Length 6104
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 744.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (User API) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 710.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (int rpmsg_send\(struct rpmsg_channel *rpdev, void *data, int len\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 666.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.99436 Tw (sends a message across to the remote processor on a given channel. The caller should specify the) Tj T* 0 Tw 1.093145 Tw (channel, the data it wants to send, and its length \(in bytes\). The message will be sent on the specified) Tj T* 0 Tw (channel, i.e. its source and destination address fields will be set to the channel's src and dst addresses.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 624.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .352209 Tw (In case there are no TX buffers available, the function will block until one becomes available \(i.e. until the) Tj T* 0 Tw .087882 Tw (remote processor consumes a tx buffer and puts it back on virtio's used descriptor ring\), or a timeout of 15) Tj T* 0 Tw (seconds elapses. When the latter happens, -ERESTARTSYS is returned.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 594.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.98881 Tw (The function can only be called from a process context \(for now\). Returns 0 on success and an) Tj T* 0 Tw (appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 561.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (int rpmsg_sendto\(struct rpmsg_channel *rpdev, void *data, int len, u32 dst\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 529.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .70811 Tw (sends a message across to the remote processor on a given channel, to a destination address provided) Tj T* 0 Tw (by the caller.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 499.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.802765 Tw (The caller should specify the channel, the data it wants to send, its length \(in bytes\), and an explicit) Tj T* 0 Tw (destination address.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 469.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .227045 Tw (The message will then be sent to the remote processor to which the channel belongs, using the channel's) Tj T* 0 Tw (src address, and the user-provided dst address \(thus the channel's dst address will be ignored\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 427.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .352209 Tw (In case there are no TX buffers available, the function will block until one becomes available \(i.e. until the) Tj T* 0 Tw .087882 Tw (remote processor consumes a tx buffer and puts it back on virtio's used descriptor ring\), or a timeout of 15) Tj T* 0 Tw (seconds elapses. When the latter happens, -ERESTARTSYS is returned.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 397.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.98881 Tw (The function can only be called from a process context \(for now\). Returns 0 on success and an) Tj T* 0 Tw (appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 352.4236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 36 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F4 10 Tf 12 TL (int rpmsg_send_offchannel\(struct rpmsg_channel *rpdev, u32 src, u32 dst,) Tj T* (                                                      void *data, int len\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 332.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (sends a message across to the remote processor, using the src and dst addresses provided by the user.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 278.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL .75332 Tw (The caller should specify the channel, the data it wants to send, its length \(in bytes\), and explicit source) Tj T* 0 Tw .638735 Tw (and destination addresses. The message will then be sent to the remote processor to which the channel) Tj T* 0 Tw .242485 Tw (belongs, but the channel's src and dst addresses will be ignored \(and the user-provided addresses will be) Tj T* 0 Tw (used instead\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 236.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .352209 Tw (In case there are no TX buffers available, the function will block until one becomes available \(i.e. until the) Tj T* 0 Tw .087882 Tw (remote processor consumes a tx buffer and puts it back on virtio's used descriptor ring\), or a timeout of 15) Tj T* 0 Tw (seconds elapses. When the latter happens, -ERESTARTSYS is returned.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 206.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.98881 Tw (The function can only be called from a process context \(for now\). Returns 0 on success and an) Tj T* 0 Tw (appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 173.2236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (int rpmsg_trysend\(struct rpmsg_channel *rpdev, void *data, int len\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 129.2236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.99436 Tw (sends a message across to the remote processor on a given channel. The caller should specify the) Tj T* 0 Tw 1.093145 Tw (channel, the data it wants to send, and its length \(in bytes\). The message will be sent on the specified) Tj T* 0 Tw (channel, i.e. its source and destination address fields will be set to the channel's src and dst addresses.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 99.22362 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .759318 Tw (In case there are no TX buffers available, the function will immediately return -ENOMEM without waiting) Tj T* 0 Tw (until one becomes available.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+21 0 obj
+<<
+/Length 6068
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.98881 Tw (The function can only be called from a process context \(for now\). Returns 0 on success and an) Tj T* 0 Tw (appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 707.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 480 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (int rpmsg_trysendto\(struct rpmsg_channel *rpdev, void *data, int len, u32 dst\)) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 675.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .70811 Tw (sends a message across to the remote processor on a given channel, to a destination address provided) Tj T* 0 Tw (by the user.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 645.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.049431 Tw (The user should specify the channel, the data it wants to send, its length \(in bytes\), and an explicit) Tj T* 0 Tw (destination address.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 615.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .227045 Tw (The message will then be sent to the remote processor to which the channel belongs, using the channel's) Tj T* 0 Tw (src address, and the user-provided dst address \(thus the channel's dst address will be ignored\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 585.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .759318 Tw (In case there are no TX buffers available, the function will immediately return -ENOMEM without waiting) Tj T* 0 Tw (until one becomes available.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 555.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.98881 Tw (The function can only be called from a process context \(for now\). Returns 0 on success and an) Tj T* 0 Tw (appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 510.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 36 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F4 10 Tf 12 TL (int rpmsg_trysend_offchannel\(struct rpmsg_channel *rpdev, u32 src, u32 dst,) Tj T* (                                                      void *data, int len\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 478.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.048555 Tw (sends a message across to the remote processor, using source and destination addresses provided by) Tj T* 0 Tw (the user.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 424.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL .999987 Tw (The user should specify the channel, the data it wants to send, its length \(in bytes\), and explicit source) Tj T* 0 Tw .638735 Tw (and destination addresses. The message will then be sent to the remote processor to which the channel) Tj T* 0 Tw .242485 Tw (belongs, but the channel's src and dst addresses will be ignored \(and the user-provided addresses will be) Tj T* 0 Tw (used instead\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 394.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .759318 Tw (In case there are no TX buffers available, the function will immediately return -ENOMEM without waiting) Tj T* 0 Tw (until one becomes available.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 364.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.98881 Tw (The function can only be called from a process context \(for now\). Returns 0 on success and an) Tj T* 0 Tw (appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 307.4236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 48 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F4 10 Tf 12 TL (struct rpmsg_endpoint *rpmsg_create_ept\(struct rpmsg_channel *rpdev,) Tj T* (              void \(*cb\)\(struct rpmsg_channel *, void *, int, void *, u32\),) Tj T* (              void *priv, u32 addr\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 263.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .995868 Tw (every rpmsg address in the system is bound to an rx callback \(so when inbound messages arrive, they) Tj T* 0 Tw .273984 Tw (are dispatched by the rpmsg bus using the appropriate callback handler\) by means of an rpmsg_endpoint) Tj T* 0 Tw (struct.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 221.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .830574 Tw (This function allows drivers to create such an endpoint, and by that, bind a callback, and possibly some) Tj T* 0 Tw .128935 Tw (private data too, to an rpmsg address \(either one that is known in advance, or one that will be dynamically) Tj T* 0 Tw (assigned for them\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 179.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .969983 Tw (Simple rpmsg drivers need not call rpmsg_create_ept, because an endpoint is already created for them) Tj T* 0 Tw .907765 Tw (when they are probed by the rpmsg bus \(using the rx callback they provide when they registered to the) Tj T* 0 Tw (rpmsg bus\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 137.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .476654 Tw (So things should just work for simple drivers: they already have an endpoint, their rx callback is bound to) Tj T* 0 Tw .494983 Tw (their rpmsg address, and when relevant inbound messages arrive \(i.e. messages which their dst address) Tj T* 0 Tw (equals to the src address of their rpmsg channel\), the driver's handler is invoked to process it.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 83.42362 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL .201318 Tw (That said, more complicated drivers might do need to allocate additional rpmsg addresses, and bind them) Tj T* 0 Tw .016235 Tw (to different rx callbacks. To accomplish that, those drivers need to call this function. Drivers should provide) Tj T* 0 Tw .110574 Tw (their channel \(so the new endpoint would bind to the same remote processor their channel belongs to\), an) Tj T* 0 Tw .14528 Tw (rx callback function, an optional private data \(which is provided back when the rx callback is invoked\), and) Tj T* 0 Tw ET
+Q
+Q
+ 
+endstream
+endobj
+22 0 obj
+<<
+/Length 4177
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 729.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.009983 Tw (an address they want to bind with the callback. If addr is RPMSG_ADDR_ANY, then rpmsg_create_ept) Tj T* 0 Tw .05186 Tw (will dynamically assign them an available rpmsg address \(drivers should have a very good reason why not) Tj T* 0 Tw (to always use RPMSG_ADDR_ANY here\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 711.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Returns a pointer to the endpoint on success, or NULL on error.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 677.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (void rpmsg_destroy_ept\(struct rpmsg_endpoint *ept\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 645.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.571318 Tw (destroys an existing rpmsg endpoint. user should provide a pointer to an rpmsg endpoint that was) Tj T* 0 Tw (previously created with rpmsg_create_ept\(\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 612.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (int register_rpmsg_driver\(struct rpmsg_driver *rpdrv\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 568.6236 cm
+q
+BT 1 0 0 1 0 26 Tm 1.37186 Tw 12 TL /F1 10 Tf 0 0 0 rg (registers an rpmsg driver with the rpmsg bus. user should provide a pointer to an rpmsg_driver struct,) Tj T* 0 Tw .477126 Tw (which contains the driver's -) Tj (>) Tj (probe\(\) and -) Tj (>) Tj (remove\(\) functions, an rx callback, and an id_table specifying) Tj T* 0 Tw (the names of the channels this driver is interested to be probed with.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 535.4236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F4 10 Tf 12 TL (void unregister_rpmsg_driver\(struct rpmsg_driver *rpdrv\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 503.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .647984 Tw (unregisters an rpmsg driver from the rpmsg bus. user should provide a pointer to a previously-registered) Tj T* 0 Tw (rpmsg_driver struct. Returns 0 on success, and an appropriate error value on failure.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 470.4236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Typical usage) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 440.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.177485 Tw (The following is a simple rpmsg driver, that sends an "hello!" message on probe\(\), and whenever it) Tj T* 0 Tw (receives an incoming message, it dumps its content to the console.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 83.22362 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 474 348 re B*
+Q
+q
+BT 1 0 0 1 0 326 Tm 12 TL /F4 10 Tf 0 0 0 rg (#include ) Tj (<) Tj (linux/kernel.h) Tj (>) Tj  T* (#include ) Tj (<) Tj (linux/module.h) Tj (>) Tj  T* (#include ) Tj (<) Tj (linux/rpmsg.h) Tj (>) Tj  T*  T* (static void rpmsg_sample_cb\(struct rpmsg_channel *rpdev, void *data, int len,) Tj T* (                                              void *priv, u32 src\)) Tj T* ({) Tj T* (      print_hex_dump\(KERN_INFO, "incoming message:", DUMP_PREFIX_NONE,) Tj T* (                                              16, 1, data, len, true\);) Tj T* (}) Tj T*  T* (static int rpmsg_sample_probe\(struct rpmsg_channel *rpdev\)) Tj T* ({) Tj T* (      int err;) Tj T*  T* (      dev_info\() Tj (&) Tj (rpdev-) Tj (>) Tj (dev, "chnl: 0x%x -) Tj (>) Tj ( 0x%x\\n", rpdev-) Tj (>) Tj (src, rpdev-) Tj (>) Tj (dst\);) Tj T*  T* (      /* send a message on our channel */) Tj T* (      err = rpmsg_send\(rpdev, "hello!", 6\);) Tj T* (      if \(err\) {) Tj T* (              pr_err\("rpmsg_send failed: %d\\n", err\);) Tj T* (              return err;) Tj T* (      }) Tj T*  T* (      return 0;) Tj T* (}) Tj T*  T* (static void rpmsg_sample_remove\(struct rpmsg_channel *rpdev\)) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+23 0 obj
+<<
+/Length 3340
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 535.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 228 re B*
+Q
+q
+BT 1 0 0 1 0 206 Tm 12 TL /F4 10 Tf 0 0 0 rg ({) Tj T* (      dev_info\() Tj (&) Tj (rpdev-) Tj (>) Tj (dev, "rpmsg sample client driver is removed\\n"\);) Tj T* (}) Tj T*  T* (static struct rpmsg_device_id rpmsg_driver_sample_id_table[] = {) Tj T* (      { .name = "rpmsg-client-sample" },) Tj T* (      { },) Tj T* (};) Tj T* (MODULE_DEVICE_TABLE\(rpmsg, rpmsg_driver_sample_id_table\);) Tj T*  T* (static struct rpmsg_driver rpmsg_sample_client = {) Tj T* (      .drv.name       = KBUILD_MODNAME,) Tj T* (      .id_table       = rpmsg_driver_sample_id_table,) Tj T* (      .probe          = rpmsg_sample_probe,) Tj T* (      .callback       = rpmsg_sample_cb,) Tj T* (      .remove         = rpmsg_sample_remove,) Tj T* (};) Tj T* (module_rpmsg_driver\(rpmsg_sample_client\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 515.8236 cm
+Q
+q
+1 0 0 1 62.69291 444.8236 cm
+.960784 .960784 .862745 rg
+n 0 71 469.8898 -71 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 45 Tm  T* ET
+q
+1 0 0 1 16 40 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.5 Tm /F3 12.5 Tf 15 TL (Note) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 16 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (a similar sample which can be built and loaded can be found in samples/rpmsg/.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 71 m 469.8898 71 l S
+n 0 0 m 469.8898 0 l S
+n 0 0 m 0 71 l S
+n 469.8898 0 m 469.8898 71 l S
+Q
+Q
+q
+1 0 0 1 62.69291 438.8236 cm
+Q
+q
+1 0 0 1 62.69291 405.8236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Allocations of rpmsg channels) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 387.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (At this point we only support dynamic allocations of rpmsg channels.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 345.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.133059 Tw (This is possible only with remote processors that have the VIRTIO_RPMSG_F_NS virtio device feature) Tj T* 0 Tw 1.77152 Tw (set. This feature bit means that the remote processor supports dynamic name service announcement) Tj T* 0 Tw (messages.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 303.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .276651 Tw (When this feature is enabled, creation of rpmsg devices \(i.e. channels\) is completely dynamic: the remote) Tj T* 0 Tw 2.082126 Tw (processor announces the existence of a remote rpmsg service by sending a name service message) Tj T* 0 Tw (\(which contains the name and rpmsg addr of the remote service, see struct rpmsg_ns_msg\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 261.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .01528 Tw (This message is then handled by the rpmsg bus, which in turn dynamically creates and registers an rpmsg) Tj T* 0 Tw 1.575318 Tw (channel \(which represents the remote service\). If/when a relevant rpmsg driver is registered, it will be) Tj T* 0 Tw (immediately probed by the bus, and can then start sending messages to the remote service.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 231.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 3.024987 Tw (The plan is also to add static creation of rpmsg channels via the virtio config space, but it's not) Tj T* 0 Tw (implemented yet.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+24 0 obj
+<<
+/Nums [ 0 25 0 R 1 26 0 R 2 27 0 R 3 28 0 R 4 29 0 R ]
+>>
+endobj
+25 0 obj
+<<
+/S /D /St 1
+>>
+endobj
+26 0 obj
+<<
+/S /D /St 2
+>>
+endobj
+27 0 obj
+<<
+/S /D /St 3
+>>
+endobj
+28 0 obj
+<<
+/S /D /St 4
+>>
+endobj
+29 0 obj
+<<
+/S /D /St 5
+>>
+endobj
+xref
+0 30
+0000000000 65535 f 
+0000000073 00000 n 
+0000000134 00000 n 
+0000000241 00000 n 
+0000000353 00000 n 
+0000000472 00000 n 
+0000000677 00000 n 
+0000000782 00000 n 
+0000000987 00000 n 
+0000001192 00000 n 
+0000001397 00000 n 
+0000001603 00000 n 
+0000001709 00000 n 
+0000002013 00000 n 
+0000002087 00000 n 
+0000002200 00000 n 
+0000002322 00000 n 
+0000002449 00000 n 
+0000002580 00000 n 
+0000002665 00000 n 
+0000008006 00000 n 
+0000014162 00000 n 
+0000020282 00000 n 
+0000024511 00000 n 
+0000027903 00000 n 
+0000027980 00000 n 
+0000028014 00000 n 
+0000028048 00000 n 
+0000028082 00000 n 
+0000028116 00000 n 
+trailer
+<<
+/ID 
+[<1c79cdcda986f55cb1bc3164c91964a3><1c79cdcda986f55cb1bc3164c91964a3>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 12 0 R
+/Root 11 0 R
+/Size 30
+>>
+startxref
+28150
+%%EOF
