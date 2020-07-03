@@ -1,11 +1,8 @@
-from datetime import datetime
 import translate
 
 from conf import Conf
 from messagebox import MessageBox
 from constants import ExceptionEnum
-
-HISTORY_FILE = '../log/history.txt'
 
 class Translator:
     def __init__(self):
@@ -41,16 +38,3 @@ class Translator:
 
     def __fix_char_error_in_translated_text(self, translated_text):
         return translated_text.replace(' • ', '\r\n').replace("&#39;", "'").replace('&quot;', '"').replace('&gt;', ' >').replace('&lt;', '< ')
-
-    def write_to_history(self, org_text, translated_text):
-        with open(HISTORY_FILE, "a+", encoding="utf-8") as file:
-            # mm/dd/YY H:M:S
-            now = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
-            text_list = [
-                '===============================================================================================================================================================',
-                '{}:',
-                'From: {}\n',
-                'To: {}',
-                '===============================================================================================================================================================\n\n'
-            ]
-            file.write('\n'.join(text_list).format(now, org_text, translated_text))

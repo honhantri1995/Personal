@@ -4,6 +4,7 @@ import pyperclip
 
 from textgetter import TextGetter
 from translator import Translator
+from history import History
 from uicontroller import MainUIController
 from tray import TrayThread
 from popup import Popup
@@ -36,40 +37,38 @@ def _start_main_loop():
         # Need a small delay to prevent high CPU and power usagage
         time.sleep(0.1)
 
-        _start_translate(config)
+        # Read hotkey string from ini file and convert it to the format that 'keyboard' module can understand
+        hotkey = config.get_hotkey().replace(' ', '').lower()
 
-def _start_translate(config):
-    # Read hotkey string from ini file and convert it to the format that 'keyboard' module can understand
-    hotkey = config.get_hotkey().replace(' ', '').lower()
+        if keyboard.is_pressed(hotkey):
+            # Only continue the script when the hotkey is released
+            while keyboard.is_pressed(hotkey):
+                continue
+            time.sleep(0.1)     # We need a small delay for the get_text() to work correctly [reason: loop and processor core]
 
-    if keyboard.is_pressed(hotkey):
-        # Only continue the script when the hotkey is released
-        while keyboard.is_pressed(hotkey):
-            continue
-        time.sleep(0.1)     # We need a small delay for the get_text() to work correctly [reason: loop and processor core]
+            try:
+                # Get text
+                text = TextGetter()
+                org_text = text.get_text()
 
-        try:
-            # Get text
-            text = TextGetter()
-            org_text = text.get_text()
+                # Translate text
+                trans = Translator()
+                translated_text = trans.translate(org_text)
 
-            # Translate text
-            trans = Translator()
-            translated_text = trans.translate(org_text)
+                # Write to history file
+                htr = History()
+                htr.write_to_history(org_text, translated_text)
 
-            # Write to history file
-            trans.write_to_history(org_text, translated_text)
+                # Display translated text on pop-up window, or replace original text by translated text
+                if config.get_translation_mode() == ConfigConst.POPUP_MODE:
+                    pu = Popup(org_text, translated_text, text.is_uicontrol_label())
+                    pu.show()
+                elif config.get_translation_mode() == ConfigConst.TRANSLATEANDREPLACE_MODE:
+                    _replace(translated_text)
 
-            # Display translated text on pop-up window, or replace original text by translated text
-            if config.get_translation_mode() == ConfigConst.POPUP_MODE:
-                pu = Popup(org_text, translated_text, text.is_uicontrol_label())
-                pu.show()
-            elif config.get_translation_mode() == ConfigConst.TRANSLATEANDREPLACE_MODE:
-                _replace(translated_text)
-
-        except Exception as e:
-            ms = MessageBox()
-            ms.show_error(e)
+            except Exception as e:
+                ms = MessageBox()
+                ms.show_error(e)
 
 def _replace(translated_text):
     pyperclip.copy(translated_text)

@@ -1,9 +1,10 @@
 from enum import Enum
 
-ICON_PATH = '../conf/tray.ico'
-CONFIG_PATH = '../conf/conf.ini'
-DLL_PATH = '../dll/'
-LOG_PATH = '../log/log.txt'
+ICON_PATH = '..\\conf\\tray.ico'
+CONFIG_PATH = '..\\conf\\conf.ini'
+DLL_PATH = '..\\dll'
+LOG_PATH = '..\\log\\log.txt'
+HISTORY_PATH = '..\\log\\history.txt'
 
 class ExceptionEnum(Enum):
     CANNOT_GET_TEXT = 0

@@ -1,3 +1,4 @@
+import os
 import logging
 from constants import LOG_PATH
 
@@ -8,7 +9,16 @@ class Logger():
         self.logger = None
         self.__configure_logging()
 
+    def __create_dir(self):
+        relative_dir = os.path.dirname(LOG_PATH)                    # Get relative dir path from file path (eg: ../log/log.txt  --> ../log/)
+        absolute_path = os.path.join(os.getcwd(), relative_dir)     # Append current dir + relative dir path
+
+        if not os.path.isdir(absolute_path):                        # If no dir, create it
+            os.mkdir(absolute_path) 
+
     def __configure_logging(self):
+        self.__create_dir()
+
         if not IS_ENABLED_DEBUG_LOG:
             logging.disable(level=logging.DEBUG)
 
