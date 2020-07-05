@@ -1,6 +1,6 @@
 @echo off
 
-set vir_env_path=virtual_env
+set vir_env_path=%CD%
 
 :: Install virtualenv
 echo ------------------------------------
@@ -8,21 +8,13 @@ echo INSTALLING VIRTUALENV ...
 pip install virtualenv
 echo DONE
 
-:: Create folder to store the virtual environment
-echo.
-echo ----------------------------------------------------------
-echo CREATING FOLDER TO STORE THE VIRTUAL ENVIRONMENT ...
-mkdir %vir_env_path%
-echo Your virutal environment is stored in folder %vir_env_path%
-cd %vir_env_path%
-echo DONE
-
 :: Activate virtualenv
 echo.
 echo ------------------------------------
 echo ACTIVATING VIRTUALENV ...
-virtualenv . --python=python3.7
-call Scripts\activate.bat
+virtualenv %vir_env_path% --python=python3.7
+call %vir_env_path%\Scripts\activate.bat
+echo Your virutal environment is stored in folder %vir_env_path%
 echo DONE
 
 :: Update pip
@@ -53,7 +45,6 @@ echo DONE
 echo.
 echo ----------------------------------------------
 echo CHECKING ALL PACKAGES JUST BEING INSTALLED
-echo (Package has no information means its installation was failed)
 echo.
 echo CHECK PACKAGE "keyboard" ...
 pip show keyboard
