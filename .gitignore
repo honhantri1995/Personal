@@ -1,2 +1,5 @@
+.vs/
+Debug/
 __pycache__/
-.vscode/
+
+*.vcxproj.user
