@@ -1,7 +1,7 @@
 import keyboard
 import pyperclip
 import time
-import clr
+import clr          # pythonnet
 import sys
 
 from messagebox import MessageBox

@@ -1,4 +1,4 @@
-from tkinter import Tk, Frame, Label, IntVar, StringVar, BooleanVar, DISABLED, NORMAL, DISABLED, W, E, constants
+from tkinter import Tk, Frame, Label, IntVar, StringVar, BooleanVar, DISABLED, NORMAL, W, E, constants
 from tkinter import ttk
 from threading import Thread
 import os
