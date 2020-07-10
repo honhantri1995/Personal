@@ -1,6 +1,9 @@
 @echo off
 
-set vir_env_path=%CD%
+set cur_path=%CD%
+set vir_env_folder=VirtualEnv
+mkdir %cur_path%\%vir_env_folder%
+set vir_env_path=%cur_path%\%vir_env_folder%
 
 :: Install virtualenv
 echo ------------------------------------

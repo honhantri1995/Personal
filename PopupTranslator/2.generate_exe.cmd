@@ -1,7 +1,9 @@
 @echo off
 
-set vir_env_path=%CD%
-set proj_dir=%vir_env_path%\PopupTranslator
+set cur_path=%CD%
+set vir_env_folder=VirtualEnv
+set vir_env_path=%cur_path%\%vir_env_folder%
+set proj_path=%cur_path%\PopupTranslator
 
 :: Notify users which resource paths have to be changed
 echo.
@@ -11,13 +13,13 @@ echo     "ICON_PATH = '../conf/tray.ico'         -->    ICON_PATH = './conf/tray
 echo     "CONFIG_PATH = '../conf/conf.ini'       -->    CONFIG_PATH = './conf/conf.ini'"
 echo     "LOG_PATH = '../log/log.txt'            -->    LOG_PATH = './log/log.txt'"
 echo     "HISTORY_PATH = '../log/history.txt'    -->    HISTORY_PATH = './log/history.txt'"
-start /B /wait notepad %proj_dir%\src\constants.py
+start /B /wait notepad %proj_path%\src\constants.py
 
 :: Notify users whether select the correct version of pystray
 echo.
 echo ONE MORE THING, WE HAVE A SMALL ISSUE WITH PACKAGE pystray WHEN WORKING WITH PyInstaller.
 echo SO PLEASE READ THIS NOTE AND FOLLOW IT TO FIX THE ISSUE:
-start /B /wait notepad %vir_env_path%\fix_pystray_error.txt
+start /B /wait notepad %cur_path%\fix_pystray_error.txt
 
 choice /C yn /m "DID YOU DO THAT?"
 set /a err_level=%ERRORLEVEL%
@@ -34,7 +36,7 @@ if %err_level% EQU 1 (
     echo.
     echo ------------------------------------
     echo RUNNING PYSTALLER ...
-    cd %proj_dir%
+    cd %proj_path%
     pyinstaller --onefile --noconsole  --icon=./conf/tray.ico  --add-data ./dll;.  --exclude-module pyinstaller  --exclude-module pip  src/main.py
     
     :: Copy folder "conf" to folder "dist". This step is required for the exe to run
@@ -46,7 +48,7 @@ if %err_level% EQU 1 (
 
     echo.
     echo ---------------------------------------------------------------------
-    echo THE EXE FILE IS SUCCESSFULLY GENERATED. CHECK IT IN FOLDER "%proj_dir%\dist"
+    echo THE EXE FILE IS SUCCESSFULLY GENERATED. CHECK IT IN FOLDER "%proj_path%\dist"
 
     :: Notify users to revert resource paths back to normal
     echo.
@@ -56,7 +58,7 @@ if %err_level% EQU 1 (
     echo     "CONFIG_PATH = './conf/conf.ini'       -->    CONFIG_PATH = '../conf/conf.ini'"
     echo     "LOG_PATH = './log/log.txt'            -->    LOG_PATH = '../log/log.txt'"
     echo     "HISTORY_PATH = './log/history.txt'    -->    HISTORY_PATH = '../log/history.txt'"
-    start /B /wait notepad %proj_dir%\src\constants.py
+    start /B /wait notepad %proj_path%\src\constants.py
     
     echo.
     echo EVERYTHING IS DONE!
