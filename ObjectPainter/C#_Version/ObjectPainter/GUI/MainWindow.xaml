@@ -1,0 +1,135 @@
+﻿<Window
+    x:Class="ObjectPainter.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:self="clr-namespace:ObjectPainter"
+    Title="ObjectPainter"
+    Width="800"
+    Height="500">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="self:CustomCommand.LoadFromFile" Executed="Command_LoadFromFile_Executed" />
+        <CommandBinding Command="self:CustomCommand.GenerateScript" Executed="Command_GenerateScript_Executed" />
+        <CommandBinding
+            CanExecute="Command_Draw_CanExecute"
+            Command="self:CustomCommand.Draw"
+            Executed="Command_Draw_Executed" />
+        <CommandBinding
+            CanExecute="Command_SaveToFile_CanExecute"
+            Command="self:CustomCommand.SaveToFile"
+            Executed="Command_SaveToFile_Executed" />
+        <CommandBinding Command="self:CustomCommand.Exit" Executed="Command_Exit_Executed" />
+    </Window.CommandBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="423*" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Command="self:CustomCommand.LoadFromFile" Header="_Load From File" />
+                <MenuItem Command="self:CustomCommand.SaveToFile" Header="_Save To File" />
+                <Separator />
+                <MenuItem Command="self:CustomCommand.Exit" Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="Action">
+                <MenuItem Command="self:CustomCommand.Draw" Header="_Draw" />
+                <Separator />
+                <MenuItem Header="Clear Script" />
+                <MenuItem Header="Clear Shapes" />
+                <Separator />
+                <MenuItem Header="Generate Script" />
+            </MenuItem>
+            <MenuItem Header="Lanauges">
+                <MenuItem Header="English" />
+                <MenuItem Header="Vietnamese" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About ObjectPainter" />
+            </MenuItem>
+        </Menu>
+
+        <TextBox
+            x:Name="editArea"
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            ScrollViewer.HorizontalScrollBarVisibility="Visible"
+            ScrollViewer.VerticalScrollBarVisibility="Visible" />
+        <WindowsFormsHost
+            x:Name="drawArea"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,0,5,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Background="WhiteSmoke"
+            Cursor="Pen"
+            SnapsToDevicePixels="True" />
+        <Button
+            x:Name="Btn_LoadFromFile"
+            Grid.Row="2"
+            Grid.Column="0"
+            Width="100"
+            Height="25"
+            Margin="5,10,0,10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Command="self:CustomCommand.LoadFromFile"
+            Content="Load From File" />
+        <Button
+            x:Name="Btn_GenerateScript"
+            Grid.Row="2"
+            Grid.Column="0"
+            Width="100"
+            Height="25"
+            Margin="0,10,0,10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Command="self:CustomCommand.GenerateScript"
+            Content="Generate Script" />
+        <Button
+            x:Name="Btn_Draw"
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="100"
+            Height="25"
+            Margin="10,10,0,10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Command="self:CustomCommand.Draw"
+            Content="Draw" />
+        <Button
+            x:Name="Btn_SaveToFile"
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="100"
+            Height="25"
+            Margin="0,10,0,10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Command="self:CustomCommand.SaveToFile"
+            Content="Save To File" />
+        <Button
+            x:Name="Btn_Exit"
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="100"
+            Height="25"
+            Margin="0,10,5,10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Command="self:CustomCommand.Exit"
+            Content="Exit" />
+    </Grid>
+
+</Window>
