@@ -19,6 +19,7 @@ class Transcripting:
                 transcript = self.transcript_start_timestamp(audio_files_dict)
             elif timestamp_mode_id == TIMESTAMP_MODE_ENUM.BOTH_START_END:
                 transcript = self.transcript_start_end_timestamp(audio_files_dict)
+
             return transcript
 
         except Exception as e:
