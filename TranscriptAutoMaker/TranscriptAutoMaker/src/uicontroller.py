@@ -229,11 +229,6 @@ class UiController:
             messagebox.showerror('Error', 'Please choose your audio or video!')
             return
 
-        # # Check if video/path contains space
-        # if ' ' in self.conf.get_audio_video_path():
-        #     messagebox.showerror('Error', 'Your inputted audio/video path contains space (" ").\nPlease remove these spaces.')
-        #     return
-
         # Disable all widgets on the UI controller before starting transcripting
         self.__disable_children(self.controller)
 
@@ -249,7 +244,7 @@ class UiController:
         # Timer to check worker thread state after each 20 ms
         self.controller.after(20, self._check_transcript_thread_state)
 
-    def _check_transcript_thread_state(self, ):
+    def _check_transcript_thread_state(self):
         if self.transcript_thread.is_alive():
             # Timer to check worker thread state after each 20 ms
             self.controller.after(20, self._check_transcript_thread_state)

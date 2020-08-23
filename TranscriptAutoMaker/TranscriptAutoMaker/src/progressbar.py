@@ -1,6 +1,5 @@
 from tkinter import Toplevel
 from tkinter import ttk
-import sys
 
 class ProgressBar:
     def __init__(self, master):
@@ -25,9 +24,6 @@ class ProgressBar:
         self.root.focus_set()                 # Set focus on this widget
         self.root.resizable(0, 0)             # Prevent resize the window
         self.__set_window_size_and_position()
-
-    # def __callback(self):
-    #     return
 
     def __set_window_size_and_position(self):
         # Size
@@ -55,6 +51,4 @@ class ProgressBar:
 
     def __on_click_stop_btn(self):
         # TODO: support stop button
-        # self.transcript_thread.raise_exception()
         self.root.destroy()
-        # sys.exit()

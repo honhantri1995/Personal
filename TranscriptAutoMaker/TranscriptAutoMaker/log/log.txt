@@ -28,3 +28,37 @@
 [2020-08-08 15:56:06] [INFO] 
 
 [2020-08-08 15:56:06] [INFO] =====================================================================================================================
+[2020-08-16 23:46:26] [INFO] 
+
+[2020-08-16 23:46:26] [INFO] =====================================================================================================================
+[2020-08-16 23:57:46] [INFO] 
+
+[2020-08-16 23:57:46] [INFO] =====================================================================================================================
+[2020-08-16 23:58:56] [INFO] 
+
+[2020-08-16 23:58:56] [INFO] =====================================================================================================================
+[2020-08-16 23:58:58] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: '..\\google-api-key\\TextToSpeech-59c726f585dd.json'
+[2020-08-17 00:00:20] [ERROR] [transcript_history.py] [write_to_file() - 30]: Failed to save transcript to Welcome_bothStartAndEndTime.srt. Error: write() argument must be str, not None.
+[2020-08-17 00:00:39] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: '..\\google-api-key\\TextToSpeech-59c726f585dd.json'
+[2020-08-17 00:00:42] [ERROR] [transcript_history.py] [write_to_file() - 30]: Failed to save transcript to Welcome_bothStartAndEndTime.srt. Error: write() argument must be str, not None.
+[2020-08-17 00:34:59] [INFO] 
+
+[2020-08-17 00:34:59] [INFO] =====================================================================================================================
+[2020-08-17 00:35:02] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: '..\\google-api-key\\TextToSpeech-59c726f585dd.json'
+[2020-08-18 00:29:42] [INFO] 
+
+[2020-08-18 00:29:42] [INFO] =====================================================================================================================
+[2020-08-18 00:29:44] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: '..\\google-api-key\\TextToSpeech-59c726f585dd.json'
+[2020-08-18 00:29:47] [ERROR] [transcript_history.py] [write_to_file() - 30]: Failed to save transcript to Welcome_bothStartAndEndTime.srt. Error: write() argument must be str, not None.
+[2020-08-18 00:29:53] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: '..\\google-api-key\\TextToSpeech-59c726f585dd.json'
+[2020-08-18 00:29:55] [ERROR] [transcript_history.py] [write_to_file() - 30]: Failed to save transcript to Welcome_bothStartAndEndTime.srt. Error: write() argument must be str, not None.
+[2020-08-18 00:30:01] [ERROR] [audio_sampling.py] [sample() - 59]: Failed to sample audio file. Error: [Errno 2] No such file or directory: 'D:\\CODE\\GIT\\Personal\\TranscriptAutoMaker\\..\\audio\\Welcome.wav'
+[2020-08-18 00:31:34] [INFO] 
+
+[2020-08-18 00:31:34] [INFO] =====================================================================================================================
+[2020-08-18 00:31:43] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: '..\\google-api-key\\TextToSpeech-59c726f585dd.json'
+[2020-08-18 00:34:57] [ERROR] [transcript_history.py] [write_to_file() - 30]: Failed to save transcript to Welcome_bothStartAndEndTime.srt. Error: write() argument must be str, not None.
+[2020-08-18 00:49:34] [INFO] 
+
+[2020-08-18 00:49:34] [INFO] =====================================================================================================================
+[2020-08-18 00:49:38] [ERROR] [transcripting.py] [transcript() - 26]: Failed to transcript. Error: [Errno 2] No such file or directory: 'D:\\CODE\\GIT\\Personal\\TranscriptAutoMaker\\TranscriptAutoMaker\\..\\google-api-key\\TextToSpeech-59c726f585dd.json'

@@ -19,6 +19,8 @@ class TranscriptThread(threading.Thread):
         ''' Override the run() method of threading.Thread
         '''
 
+        #########################
+        # Validate input
         audio_video_path = self.conf.get_audio_video_path()
 
         # Get input format (extension)
@@ -42,14 +44,19 @@ class TranscriptThread(threading.Thread):
         # If input is audio file, keep using it as it was inputted
         else:
             self.wav_path = self.conf.get_audio_video_path()
+        #########################
 
+        #########################
         # Sample audio file
         audio_files_dict = self.__sample()
         if len(audio_files_dict) == 0:
             return False
+        #########################
 
+        #########################
         # Transcript
         self.__transcript(audio_files_dict)
+        #########################
 
     def __check_format(self, audio_video_ext):
         all_supported_formats = ['.wav', '.mp3', '.flv', '.avi', '.mkv', '.mp4']

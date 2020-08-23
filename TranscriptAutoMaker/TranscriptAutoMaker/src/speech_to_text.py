@@ -1,3 +1,5 @@
+import os
+
 from google.cloud import speech_v1
 from google.oauth2 import service_account
 
@@ -15,8 +17,9 @@ class SpeechToText:
         Args:
         file_path Path to local audio file, e.g. /path/audio.wav
         """
+        google_api_key = os.path.join(os.getcwd(), GOOGLE_API_KEY_PATH)    # Append current dir + transcript path
 
-        credentials = service_account.Credentials.from_service_account_file(GOOGLE_API_KEY_PATH)
+        credentials = service_account.Credentials.from_service_account_file(google_api_key)
         client = speech_v1.SpeechClient(credentials=credentials)
 
         config = {
