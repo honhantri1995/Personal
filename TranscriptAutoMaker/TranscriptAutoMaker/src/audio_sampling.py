@@ -36,6 +36,8 @@ class AudioSampling:
                 messagebox.showerror('Error', 'No sample created because either Min Silence Length ({} ms) is too long, or Max Silence dB ({} dB) is too high.\nPlease adjust them and retry!'.format(min_silence_len, max_silence_dB))
                 return []
 
+            # Have to go to the sample directory to save the sample files
+            before_dir = os.getcwd()
             os.chdir(self.sample_dir)
 
             result_dict = {'path': None, 'length_s': 0.0}
@@ -52,7 +54,8 @@ class AudioSampling:
                 result_dict['length_s'] = AudioSegment.from_file(result_dict['path']).duration_seconds
                 result_dicts.append(result_dict.copy())
 
-            os.chdir('..')
+            # Once done, go back to the before directory
+            os.chdir(before_dir)
             return result_dicts
 
         except Exception as e:

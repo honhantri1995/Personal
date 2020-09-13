@@ -1,0 +1,2 @@
+- Support Stop button while transcripting
+- Exit transcript worker-thread if error occurs

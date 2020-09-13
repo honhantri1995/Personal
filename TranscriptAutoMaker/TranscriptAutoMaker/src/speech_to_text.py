@@ -23,7 +23,6 @@ class SpeechToText:
         client = speech_v1.SpeechClient(credentials=credentials)
 
         config = {
-            # FIXME
             "language_code": self.conf.get_language(),
             # "sample_rate_hertz": 44100,   # This attribute must either be omitted or match the value in the WAV header of the file
             "enable_word_time_offsets": True

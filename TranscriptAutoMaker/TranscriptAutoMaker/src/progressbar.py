@@ -10,6 +10,7 @@ class ProgressBar:
         self.__create_window()
         self.__create_label()
         self.__create_progressbar()
+        # TODO: Support stop button
         # self.__create_stop_btn()
 
         # Because we use Toplevel() instead of Tk(), we don't need root.mainloop() here
@@ -50,5 +51,5 @@ class ProgressBar:
         stop_btn.grid(column=1, row=3, padx=10, pady=5)
 
     def __on_click_stop_btn(self):
-        # TODO: support stop button
+        # TODO: If support stop button, modify code here
         self.root.destroy()
