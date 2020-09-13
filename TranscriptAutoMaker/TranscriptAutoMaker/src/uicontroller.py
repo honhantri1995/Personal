@@ -24,6 +24,9 @@ class UiController:
         self.transcript_thread = None
         self.progress_bar = None
 
+        self.audio_video_path = ''
+        self.transcript_path = ''
+
         self.__set_default_config()
 
     def __set_default_config(self):
@@ -89,10 +92,9 @@ class UiController:
         browse_btn.grid(column=3, row=1, padx=5, sticky=W)
 
     def __on_click_audio_video_browse_btn(self):
-        filepath = filedialog.askopenfilename()
-        filepath = filepath.replace('/', '\\')      # Optional step. For Windows, we want to display "\" instead of "/"
-        self.audio_video_path_stringvar.set(filepath)
-        self.conf.set_audio_video_path(filepath)
+        self.audio_video_path = filedialog.askopenfilename()
+        self.audio_video_path = self.audio_video_path.replace('/', '\\')      # Optional step. For Windows, we want to display "\" instead of "/"
+        self.audio_video_path_stringvar.set(self.audio_video_path)
 
     def __create_transcript_path_entry(self):
         # Label
@@ -112,10 +114,9 @@ class UiController:
         browse_btn.grid(column=3, row=2, padx=5, sticky=W)
 
     def __on_click_transcript_browse_btn(self):
-        filepath = filedialog.askdirectory()
-        filepath = filepath.replace('/', '\\')      # Optional step. For Windows, we want to display "\" instead of "/"
-        self.transcript_path_stringvar.set(filepath)
-        self.conf.set_transcript_path(filepath)
+        self.transcript_path = filedialog.askdirectory()
+        self.transcript_path = self.transcript_path.replace('/', '\\')      # Optional step. For Windows, we want to display "\" instead of "/"
+        self.transcript_path_stringvar.set(self.transcript_path)
 
     def __create_language_combobox(self):
         # Label
@@ -220,6 +221,12 @@ class UiController:
         browse_btn.grid(column=1, row=5, padx=5, pady=10)
 
     def __on_click_start_transcripting_btn(self):
+        # Get paths from Entry and set them to config file
+        self.audio_video_path = self.audio_video_path_stringvar.get()
+        self.transcript_path = self.transcript_path_stringvar.get()
+        self.conf.set_audio_video_path(self.audio_video_path)
+        self.conf.set_transcript_path(self.transcript_path)
+
         # Set inputted value from Silence Setting entries
         self.conf.set_min_silence_len(int(self.min_silence_length_entry.get()))
         self.conf.set_max_silence_dB(int(self.max_silence_dB_entry.get()))

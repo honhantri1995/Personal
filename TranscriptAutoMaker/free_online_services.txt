@@ -1,0 +1,5 @@
+Add subtitle (srt format) to video + edit timestamp:
+https://clideo.com/editor/add-subtitles-to-video
+
+Extract YouTube transcript to rst format:
+https://www.dvdvideosoft.com/online-youtube-subtitles-download
