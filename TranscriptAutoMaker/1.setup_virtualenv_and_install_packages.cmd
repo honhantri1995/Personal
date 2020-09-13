@@ -29,6 +29,8 @@ echo.
 echo ------------------------------------
 echo INSTALLING PACKAGES ...
 echo.
+pip install configobj
+echo.
 pip install google-cloud-speech
 echo.
 pip install google-cloud-storage
@@ -41,6 +43,9 @@ echo DONE
 echo.
 echo ----------------------------------------------
 echo CHECKING ALL PACKAGES JUST BEING INSTALLED
+echo.
+echo CHECK PACKAGE "configobj" ...
+pip show configobj
 echo.
 echo CHECK PACKAGE "google-cloud-speech" ...
 pip show google-cloud-speech
