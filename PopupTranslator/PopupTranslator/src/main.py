@@ -32,7 +32,7 @@ def _start_systray_thread():
     time.sleep(0.2)     # Need a small delay for the thread to actually start
 
 def _start_main_loop():
-    config = Conf()
+    config = Conf.get_instance()
     while True:
         # Need a small delay to prevent high CPU and power usagage
         time.sleep(0.05)

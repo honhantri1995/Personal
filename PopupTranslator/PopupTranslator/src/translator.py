@@ -1,6 +1,7 @@
 import translate
 
 from conf import Conf
+from logger import Logger
 from messagebox import MessageBox
 from constants import ExceptionEnum
 
@@ -11,13 +12,18 @@ class Translator:
     def translate(self, org_text):
         org_text_after_fixed = self.__fix_char_error_in_org_text(org_text)
 
-        config = Conf()
+        config = Conf.get_instance()
         try:
             trans = translate.Translator(to_lang=config.get_dest_lang(), from_lang=config.get_source_lang())
             translated_text = trans.translate(org_text_after_fixed)
         except Exception as e:
-            ms = MessageBox()
-            ms.show_error('Failed to translate!' + '\n\nDetails: ' + str(e))
+            # Write log
+            logger = Logger.get_instance()
+            logger.get_instance().error('Failed to translate! ' + 'Details: ' + str(e))
+            # Show message box
+            mb = MessageBox()
+            mb.show_error('Failed to translate!' + '\n\nDetails: ' + str(e))
+
             raise ValueError(ExceptionEnum.CANNOT_TRANSLATE)
 
         translated_text_after_fixed = self.__fix_char_error_in_translated_text(translated_text)

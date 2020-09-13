@@ -23,7 +23,7 @@ class TrayThread(Thread):
 class Tray:
     def __init__(self):
         self.tray = None
-        self.conf = Conf()
+        self.conf = Conf.get_instance()
 
         self.is_translationmodemenu_item_checked = {
             'popup' : False,

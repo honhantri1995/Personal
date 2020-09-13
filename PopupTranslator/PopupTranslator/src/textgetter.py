@@ -4,6 +4,7 @@ import time
 import clr          # pythonnet
 import sys
 
+from logger import Logger
 from messagebox import MessageBox
 from constants import ExceptionEnum, DLL_PATH
 
@@ -40,12 +41,17 @@ class TextGetter:
 
         try:
             text = pyperclip.paste()
+            return text
         except Exception as e:
-            ms = MessageBox()
-            ms.show_error(e)
+            # Write log
+            logger = Logger.get_instance()
+            logger.get_instance().error('Failed to copy text! ' + 'Details: ' + str(e))
+            # Show message box
+            mb = MessageBox()
+            mb.show_error('Failed to copy text!' + '\n\nDetails: ' + str(e))
 
-        return text
-
+            raise ValueError(ExceptionEnum.CANNOT_TRANSLATE)
+            
     def __get_uicontrol_label(self):
         cur_pos = Cursor.Position
         cur_point = Point(cur_pos.X, cur_pos.Y)
@@ -56,8 +62,14 @@ class TextGetter:
             control_label = element.Current.HelpText
 
         if control_label == '':
+            ms = 'Failed to get text from UI controls!'
+            # Write log
+            logger = Logger.get_instance()
+            logger.get_instance().error(ms)
+            # Show message box
             mb = MessageBox()
-            mb.show_error('Failed to get text from UI controls!')
+            mb.show_error(ms)
+
             raise ValueError(ExceptionEnum.CANNOT_GET_TEXT)
 
         return control_label

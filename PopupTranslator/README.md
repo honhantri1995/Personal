@@ -18,6 +18,7 @@ Requirements
 - Python version: 3.7
 
 - Packages:
+  + configobj (better replacement for the standard "configparser")
   + keyboard
   + pystray
   + translate

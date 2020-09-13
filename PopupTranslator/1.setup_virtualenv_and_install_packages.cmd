@@ -32,6 +32,8 @@ echo.
 echo ------------------------------------
 echo INSTALLING PACKAGES ...
 echo.
+pip install configobj
+echo.
 pip install keyboard
 echo.
 pip install pystray
@@ -48,6 +50,9 @@ echo DONE
 echo.
 echo ----------------------------------------------
 echo CHECKING ALL PACKAGES JUST BEING INSTALLED
+echo.
+echo CHECK PACKAGE "configobj" ...
+pip show configobj
 echo.
 echo CHECK PACKAGE "keyboard" ...
 pip show keyboard

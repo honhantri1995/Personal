@@ -14,7 +14,7 @@ class Popup:
         self.translated_text = translated_text
         self.is_uicontrol_label = is_uicontrol_label
         self.displayed_text = ''
-        self.conf = Conf()
+        self.conf = Conf.get_instance()
         self.popup = None
         self.text_widget = None
         self.font = None

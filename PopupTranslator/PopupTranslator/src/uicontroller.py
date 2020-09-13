@@ -25,7 +25,7 @@ class MainUIControllerThread(Thread):
 class MainUIController:
     def __init__(self):
         self.controller = None
-        self.conf = Conf()
+        self.conf = Conf.get_instance()
         self.translation_mode_var = None
         self.hotkey_var = None
         self.src_lang_var = None

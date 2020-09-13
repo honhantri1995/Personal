@@ -1,70 +1,70 @@
-from configparser import ConfigParser
+import os
+from configobj import ConfigObj
 from constants import CONFIG_PATH
 
 class Conf:
+    __instance = None
+
+    @staticmethod
+    def get_instance():
+        """ Static access method. """
+        if Conf.__instance == None:
+            Conf()
+        return Conf.__instance
+
     def __init__(self):
-        # Note: By default, configparser considers '#' and ';' as comment marks.
-        # However, this means it will automatically delete all comment marks when writing (via set() method) to the file.
-        # To avoid this, we set "comment_prefixes=" to empty so that it doesn't consider '#' and ';' as comment marks.
-        self.config = ConfigParser(comment_prefixes=())
+        """ Virtually private constructor. """
+        if Conf.__instance != None:
+            raise Exception("This class is a singleton!")
+        else:
+            Conf.__instance = self
+            file_path = os.path.join(os.getcwd(), CONFIG_PATH)
+            self.conf = ConfigObj(file_path)
+        # TODO: Add protection for multithread
 
     def get_hotkey(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('HOTKEY', 'HOTKEY')
+        return self.conf['HOTKEY']['HOTKEY']
 
     def set_hotkey(self, name):
-        self.config.set('HOTKEY', 'HOTKEY', name)
-        with open(CONFIG_PATH, 'w') as config:
-            self.config.write(config)
+        self.conf['HOTKEY']['HOTKEY'] = name
+        self.conf.write()
 
     def get_source_lang(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('LANGUAGE', 'FROM_LANG')
+        return self.conf['LANGUAGE']['FROM_LANG']
 
     def set_source_lang(self, code):
-        self.config.set('LANGUAGE', 'FROM_LANG', code)
-        with open(CONFIG_PATH, 'w') as config:
-            self.config.write(config)
+        self.conf['LANGUAGE']['FROM_LANG'] = code
+        self.conf.write()
 
     def get_dest_lang(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('LANGUAGE', 'TO_LANG')
+        return self.conf['LANGUAGE']['TO_LANG']
 
     def set_dest_lang(self, code):
-        self.config.set('LANGUAGE', 'TO_LANG', code)
-        with open(CONFIG_PATH, 'w') as config:
-            self.config.write(config)
+        self.conf['LANGUAGE']['TO_LANG'] = code
+        self.conf.write()
 
     def get_translation_mode(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.getint('MODE', 'TRANSLATION')
+        return int(self.conf['MODE']['TRANSLATION'])
 
     def set_translation_mode(self, id):
-        self.config.set('MODE', 'TRANSLATION', str(id))
-        with open(CONFIG_PATH, 'w') as config:
-            self.config.write(config)
+        self.conf['MODE']['TRANSLATION'] = str(id)
+        self.conf.write()
 
     def get_font(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('POPUP_UI', 'FONT')
+        return self.conf['POPUP_UI']['FONT']
 
     def get_fontsize(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('POPUP_UI', 'FONT_SIZE')
+        return self.conf['POPUP_UI']['FONT_SIZE']
 
     def get_popup_bkcolor(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('POPUP_UI', 'BK_COLOR')
+        return self.conf['POPUP_UI']['BK_COLOR']
 
     def get_maincontroller_bkcolor(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.get('MAIN_CONTROLLER_UI', 'BK_COLOR')
+        return self.conf['MAIN_CONTROLLER_UI']['BK_COLOR']
 
     def get_is_close_popup_when_outoffocus(self):
-        self.config.read(CONFIG_PATH)
-        return self.config.getboolean('EVENT', 'CLOSE_POPUP_WHEN_OUTOFFOCUS')
+        return bool(self.conf['EVENT']['CLOSE_POPUP_WHEN_OUTOFFOCUS'])
 
     def set_is_close_popup_when_outoffocus(self, value):
-        self.config.set('EVENT', 'CLOSE_POPUP_WHEN_OUTOFFOCUS', str(value))
-        with open(CONFIG_PATH, 'w') as config:
-            self.config.write(config)
+        self.conf['EVENT']['CLOSE_POPUP_WHEN_OUTOFFOCUS'] = str(value)
+        self.conf.write()
