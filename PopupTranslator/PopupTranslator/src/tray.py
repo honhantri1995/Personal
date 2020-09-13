@@ -13,9 +13,9 @@ class TrayThread(Thread):
         self.threadID = threadID
         self.name = name
 
-    ''' Override the run() method of threading.Thread
-    '''
     def run(self):
+        ''' Override the run() method of threading.Thread
+        '''
         systray = Tray()
         systray.run()
 
@@ -40,9 +40,9 @@ class Tray:
         self.tray.title = self.__update_icon_hovertext()
         self.tray.HAS_DEFAULT_ACTION = True
 
-    ''' Generate image data from .icon file
-    '''
     def __create_image_data(self):
+        ''' Generate image data from .icon file
+        '''
         return Image.open(ICON_PATH)
         # TODO: Is there any other way that does not need to convert the image ?
 

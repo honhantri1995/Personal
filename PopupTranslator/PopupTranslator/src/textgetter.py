@@ -57,7 +57,7 @@ class TextGetter:
 
         if control_label == '':
             mb = MessageBox()
-            mb.show_error('Cannot get the text from UI controls to translate.')
+            mb.show_error('Failed to get text from UI controls!')
             raise ValueError(ExceptionEnum.CANNOT_GET_TEXT)
 
         return control_label

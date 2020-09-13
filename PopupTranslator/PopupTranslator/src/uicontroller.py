@@ -14,9 +14,9 @@ class MainUIControllerThread(Thread):
         self.threadID = threadID
         self.name = name
 
-    ''' Override the run() method of threading.Thread
-    '''
     def run(self):
+        ''' Override the run() method of threading.Thread
+        '''
         self.running = True
         controller = MainUIController()
         controller.show()
@@ -34,16 +34,16 @@ class MainUIController:
         self.outoffocus_checkbox = None
 
     def show(self):
-        self.__init_window()
-        self.__init_translation_mode_controls()
-        self.__init_hotkey_controls()
-        self.__init_language_controls()
-        self.__init_outoffoucus_close_checkbox()
-        self.__init_buttons()
+        self.__create_window()
+        self.__create_translation_mode_controls()
+        self.__create_hotkey_controls()
+        self.__create_language_controls()
+        self.__create_outoffoucus_close_checkbox()
+        self.__create_buttons()
 
         self.controller.mainloop()
 
-    def __init_window(self):
+    def __create_window(self):
         self.controller = Tk()
         self.controller.title('Popup Translator')
         self.controller.iconbitmap(ICON_PATH)
@@ -65,7 +65,7 @@ class MainUIController:
 
         self.controller.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
-    def __init_translation_mode_controls(self):
+    def __create_translation_mode_controls(self):
         # Frame with label
         frame = ttk.LabelFrame(self.controller, text='Translation Mode')
         frame.grid(column=1, row=1, padx=10, pady=10)
@@ -86,7 +86,7 @@ class MainUIController:
         self.conf.set_translation_mode(self.translation_mode_var.get())
         self.__on_update_outoffocus_close_checkbox_state()
 
-    def __init_hotkey_controls(self):
+    def __create_hotkey_controls(self):
         # Framew with label
         frame = ttk.LabelFrame(self.controller, text='Hotkey')
         frame.grid(column=2, row=1, padx=10, pady=10)
@@ -106,7 +106,7 @@ class MainUIController:
     def __on_click_hotkey_radiobutton(self):
         self.conf.set_hotkey(str(self.hotkey_var.get()))
 
-    def __init_language_controls(self):
+    def __create_language_controls(self):
         # Frame with labels
         frame = ttk.LabelFrame(self.controller, text='Language')
         frame.grid(column=1, row=2, padx=10, pady=10, columnspan=2)
@@ -145,16 +145,16 @@ class MainUIController:
     def __change_dest_language(self, *args):
         self.conf.set_dest_lang(languagelist.dest_language_code_dict[self.dest_lang_var.get()])
 
-    ''' Return key for any value from a dictionary
-    '''
     def __get_key_from_dict(self, dictionary, val):
+        ''' Return key for any value from a dictionary
+        '''
         for key, value in dictionary.items():
             if val == value:
                 return key
 
         return "Key doesn't exist"
 
-    def __init_outoffoucus_close_checkbox(self):
+    def __create_outoffoucus_close_checkbox(self):
         # Frame
         frame = Frame(self.controller)
         frame.grid(column=1, row=3, columnspan=2, padx=10, pady=5, sticky=W)
@@ -179,7 +179,7 @@ class MainUIController:
         else:
             self.outoffocus_checkbox.config(state=NORMAL)
 
-    def __init_buttons(self):
+    def __create_buttons(self):
         # Frame
         frame = Frame(self.controller)
         frame.grid(column=1, row=4, columnspan=2, padx=10, pady=5)

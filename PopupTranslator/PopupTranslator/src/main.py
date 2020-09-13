@@ -35,7 +35,7 @@ def _start_main_loop():
     config = Conf()
     while True:
         # Need a small delay to prevent high CPU and power usagage
-        time.sleep(0.1)
+        time.sleep(0.05)
 
         # Read hotkey string from ini file and convert it to the format that 'keyboard' module can understand
         hotkey = config.get_hotkey().replace(' ', '').lower()
@@ -66,9 +66,8 @@ def _start_main_loop():
                 elif config.get_translation_mode() == ConfigConst.TRANSLATEANDREPLACE_MODE:
                     _replace(translated_text)
 
-            except Exception as e:
-                ms = MessageBox()
-                ms.show_error(e)
+            except Exception:
+                continue
 
 def _replace(translated_text):
     pyperclip.copy(translated_text)

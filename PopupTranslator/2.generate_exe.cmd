@@ -8,11 +8,8 @@ set proj_path=%cur_path%\PopupTranslator
 :: Notify users which resource paths have to be changed
 echo.
 echo ------------------------------------------------------------------------------------------------
-echo NEED TO CHANGE PATHS OF FOLLOWING RESOURCES DEFINED IN "constants.py". FROM ... TO ...:
-echo     "ICON_PATH = '../conf/tray.ico'         -->    ICON_PATH = './conf/tray.ico'"
-echo     "CONFIG_PATH = '../conf/conf.ini'       -->    CONFIG_PATH = './conf/conf.ini'"
-echo     "LOG_PATH = '../log/log.txt'            -->    LOG_PATH = './log/log.txt'"
-echo     "HISTORY_PATH = '../log/history.txt'    -->    HISTORY_PATH = './log/history.txt'"
+echo NEED TO CHANGE PATHS OF PROJECT DIRECTORY DEFINED IN "constants.py". FROM ... TO ...:
+echo     "PROJECT_DIR = '..\\'         -->    PROJECT_DIR = '.\\'"
 start /B /wait notepad %proj_path%\src\constants.py
 
 :: Notify users whether select the correct version of pystray
@@ -53,11 +50,8 @@ if %err_level% EQU 1 (
     :: Notify users to revert resource paths back to normal
     echo.
     echo ----------------------------------------------------------------------------------------------------------------------
-    echo YOU'RE DONE. LET'S REVERT THE PATHS OF FOLLOWING RESOURCES DEFINED IN "constants.py" BACK TO NORMAL. FROM ... TO ...:
-    echo     "ICON_PATH = './conf/tray.ico'         -->    ICON_PATH = '../conf/tray.ico'"
-    echo     "CONFIG_PATH = './conf/conf.ini'       -->    CONFIG_PATH = '../conf/conf.ini'"
-    echo     "LOG_PATH = './log/log.txt'            -->    LOG_PATH = '../log/log.txt'"
-    echo     "HISTORY_PATH = './log/history.txt'    -->    HISTORY_PATH = '../log/history.txt'"
+    echo YOU'RE DONE. LET'S REVERT THE PATHS OF PROJECT DIRECTORY DEFINED IN "constants.py" BACK TO NORMAL. FROM ... TO ...:
+    echo     "PROJECT_DIR = '.\\'         -->    PROJECT_DIR = '..\\'"
     start /B /wait notepad %proj_path%\src\constants.py
     
     echo.

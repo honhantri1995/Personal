@@ -20,16 +20,16 @@ class Popup:
         self.font = None
 
     def show(self):
-        self.__init_popup()
-        self.__init_font()
-        self.__init_text_widget()
+        self.__create_popup_window()
+        self.__create_font_widget()
+        self.__create_text_widget()
         self.__set_popup_size_and_pos()
         self.__set_evenbinding()
         self.__set_focus()
 
         self.popup.mainloop()
 
-    def __init_popup(self):
+    def __create_popup_window(self):
         # Create a popup (= the root/master window) and set its properties
         self.popup = Tk()
         self.popup.title('Popup Translator')
@@ -45,7 +45,7 @@ class Popup:
         # hbar = Scrollbar(self.popup, orient=HORIZONTAL)
         # hbar.pack(side=BOTTOM, fill=X)
 
-    def __init_text_widget(self):
+    def __create_text_widget(self):
         # Choose text to display on popup
         if self.is_uicontrol_label:
             self.displayed_text = self.org_text + '\n' + '===\n' + self.translated_text
@@ -58,16 +58,16 @@ class Popup:
         self.text_widget.pack(side=LEFT, fill=BOTH, expand=True)
         self.text_widget.configure(bg=self.popup.cget('bg'), relief=FLAT, state=DISABLED, font=self.font, wrap=WORD)
 
-    def __init_font(self):
+    def __create_font_widget(self):
         self.font = Font(root=self.popup, family=self.conf.get_font(), size=self.conf.get_fontsize())
 
-    ''' Set size and position for the popup
-        Details:
-            - Popup size fits the text size (both horizonal and vertical side),
-              but the text size cannot exceed POPUP_MAX_WIDTH or POPUP_MAX_HEIGHT
-            - Popup position is at the cursor position
-    '''
     def __set_popup_size_and_pos(self):
+        ''' Set size and position for the popup
+            Details:
+                - Popup size fits the text size (both horizonal and vertical side),
+                but the text size cannot exceed POPUP_MAX_WIDTH or POPUP_MAX_HEIGHT
+                - Popup position is at the cursor position
+        '''
         ###### Size #####
         # Warning: Cannot measure(self.displayed_text) because the measure() method considers multiple lines as one line, making the width in pixels too wrong
         text_width_in_pixels = 0
@@ -111,18 +111,18 @@ class Popup:
         # What to do is a key (or hotkey) is pressed
         self.popup.bind('<KeyPress>', self.__on_key_pressed)
 
-    ''' Force to focus on the popup when it's displayed '''
     def __set_focus(self):
+        ''' Force to focus on the popup when it's displayed '''
         self.popup.focus_force()
 
-    ''' Close the popup when clicking anywhere outside of it '''
     def __on_focus_out(self, event):
+        ''' Close the popup when clicking anywhere outside of it '''
         if self.conf.get_is_close_popup_when_outoffocus():
             self.popup.destroy()
 
-    ''' Close the popup when the starting hotkey is press
-        Details: When the next text is translated, the current popup is closed and the new popup is shown.
-        This is useful when translating items in the UI content menu. '''
     def __on_key_pressed(self, event):
+        ''' Close the popup when the starting hotkey is press
+            Details: When the next text is translated, the current popup is closed and the new popup is shown.
+            This is useful when translating items in the UI content menu. '''
         if keyboard.is_pressed(self.conf.get_hotkey()):
             self.popup.destroy()
