@@ -1,0 +1,12 @@
+Limitations:
+1. Đang tính điểm giống nhau cho tất cả câu hỏi.
+   Sửa: Thay đổi cách đọc file Solution và cách tính điểm dựa vào điểm số khác nhau của từng câu hỏi
+2. Chưa có tính năng tính giờ khi làm bài thi.
+   Sửa: Phải dùng multithread
+   
+Build command:
+1. Nếu SV làm bài thi bằng cách mở file txt trong notepad:
+g++ main.cpp account.cpp csv.cpp subject.cpp exam.cpp feedback.cpp grade.cpp menu.cpp
+
+2. Nếu SV làm bài thi bằng cách điền câu trả lời trực tiếp trên cmd:
+g++ -DDO_EXAM_ON_CMD main.cpp account.cpp csv.cpp subject.cpp exam.cpp feedback.cpp grade.cpp menu.cpp

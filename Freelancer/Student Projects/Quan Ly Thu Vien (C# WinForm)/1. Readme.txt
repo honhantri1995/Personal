@@ -1,0 +1,10 @@
+Limitations:
+1. Màn hình thống kê chưa hữu dụng lắm:
+    a) Màn hình thống kê sách chỉ nên list ra những sách đã trả.
+       Và màn hình mượn trả sách chỉ nên list ra những sách chưa trả hoặc quá hạn
+2. Admin chưa có tính năng xác nhận sách sau khi SV đã trả
+   Sửa: Nên bổ sung thêm button "Xác nhận trả" (và thây đổi 1 tí cấu trúc database)
+3. TabIndex cho các control còn rất lộn xộn
+   Sửa: Nếu có thời gian thì nên sửa lại TabIndex để tiện sử dụng chương trình hơn
+4. Ngày mượn và ngày trả trong màn hình mượn sách đang trùng nhau (đều là ngày hiện tại)
+   Sửa: Chuyển ngày trả sang 10 ngày sau ngày mượn
