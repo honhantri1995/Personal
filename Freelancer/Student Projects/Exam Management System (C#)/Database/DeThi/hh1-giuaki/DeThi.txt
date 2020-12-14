@@ -1,0 +1,43 @@
+##### CAUHOI_BEGIN #####
+1
+Hình vuông có mấy cạnh?
+A: 1, B: 2, C: 3, D: 4
+##### CAUHOI_END #####
+
+
+##### CAUHOI_BEGIN #####
+2
+Hình tam giác có mấy cạnh?
+A: 1, B: 2, C: 3, D: 4
+##### CAUHOI_END #####
+
+
+##### CAUHOI_BEGIN #####
+3
+Nhận định dưới đây đúng hay sai?
+(D là đúng, S là sai)
+"Tam giác có hai cạnh bằng nhau là tam giác đều"
+A: Đúng
+B: Sai
+##### CAUHOI_END #####
+
+
+##### CAUHOI_BEGIN #####
+4
+Cho hình chữ nhật có cạnh a = 2, cạnh b = 4. Hãy tính chu vi của nó?
+A: 10
+B: 11
+C: 12
+D: 13
+##### CAUHOI_END #####
+
+
+##### CAUHOI_BEGIN #####
+5
+Các nhận định dưới đây, nhận định nào đúng?
+A: Hình chữ nhật có 2 cạnh bằng nhau
+B: Bình bình hành là trường hợp đặc biệt của hình tam giác
+C: Tam giác đều là tam giác có 3 cạnh bằng nhau
+##### CAUHOI_END #####
+
+

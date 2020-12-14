@@ -1,0 +1,7 @@
+Limitations:
+1. Đang tính điểm giống nhau cho tất cả câu hỏi.
+   Sửa: Thay đổi cách đọc file Solution và cách tính điểm dựa vào điểm số khác nhau của từng câu hỏi
+2. Chưa có tính năng tính giờ khi làm bài thi.
+   Sửa: Phải dùng multithread
+3. Màn hình quản lý câu hỏi (của giáo viên) và làm bài thi (của sinh viên) chưa có thanh điều hướng dạng danh sách câu hỏi
+   Sửa: Thêm thanh điều hướng

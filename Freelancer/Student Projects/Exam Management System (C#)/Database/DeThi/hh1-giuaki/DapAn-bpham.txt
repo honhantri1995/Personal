@@ -1,0 +1,6 @@
+# Thu tu cau hoi, dap an (dang so: 1=A, 2=B, 4=C, 8=D, 16=E, 3=A&B, 5=A&C, ...)
+1,0
+2,0
+3,0
+4,0
+5,0

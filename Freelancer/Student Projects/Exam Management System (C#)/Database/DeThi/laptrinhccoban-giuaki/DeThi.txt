@@ -1,0 +1,28 @@
+##### CAUHOI_BEGIN #####
+1
+Xâu định dạng nào dưới đây dùng để in ra một số nguyên hệ 16:
+a) "%d"
+b) "%x"
+c) "%i"
+d) "%u"
+##### CAUHOI_END #####
+
+
+##### CAUHOI_BEGIN #####
+2
+Kết quả của chương trình sau:
+#include “stdio.h”
+void main()
+{
+    int i;
+    i=10;
+    printf(“%o”,i);
+}
+
+a) 12
+b) 10
+c) 8
+d) Kết quả khác
+##### CAUHOI_END #####
+
+
