@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.side-nav-bar-container {
+  float: left;
+  width: 20%;
+  margin-left: 5px;
+  margin-top: 50px;
+}
+
+.menu a {
+  display: block;
+  line-height: 20px;
+  padding: 8px;
+  text-decoration: none !important;
+}
+
+.menu > li > a {
+  background-color: #242327;
+  border-color: blue;
+  color: #d6d1d1;
+  font-family: sans-serif;
+  font-size: 14px;
+  border-top: 1px solid rgb(243, 237, 237);
+  border-bottom: 1px solid rgb(243, 237, 237);
+}
+
+ul.unstyle {
+  list-style: none;
+}
+
+.menu > li a:hover {
+  background: #44423e;
+}

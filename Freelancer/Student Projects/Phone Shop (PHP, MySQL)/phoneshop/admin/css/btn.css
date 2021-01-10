@@ -1,0 +1,19 @@
+.submit_btn {
+  float: right;
+  width: 20%;
+  height: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+}
+
+.btn {
+  border: 1px solid rgb(107, 105, 105);
+  background-color: ivory;
+  padding: 2px 7px;
+  font-family: Arial;
+  font-size: 16px;
+  cursor: pointer;
+}

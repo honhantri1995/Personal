@@ -1,0 +1,59 @@
+
+<head>
+	<link rel="stylesheet" href="../admin/css/form.css">
+</head>
+
+<body>
+	<div class="form-container">
+
+		<form class="form-group">
+			<label class="label" for="basicinput">Category</label>
+			<select class="form" name="category" onChange="getSubcat(this.value);" required>
+				<option value="">Select Category</option>
+				<?php
+				getCategories();
+				?>
+			</select>
+		</form>
+	
+		<form class="form-group">
+			<label class="label" for="basicinput">Product Name</label>
+			<input class="form" type="text" name="productName" required>
+		</form>
+	
+		<form class="form-group">
+			<label class="label" for="basicinput">Company</label>
+			<input class="form"  type="text" name="productCompany" required>
+		</form>
+
+		<form class="form-group">
+			<label class="label" for="basicinput">Price</label>
+			<input class="form" type="text" name="productPrice" required>
+		</form>
+	
+		<form class="form-group">
+			<label class="label" for="basicinput">Description</label>
+			<textarea class="form" name="productDescription" style="height: 100px"></textarea>
+		</form>
+	
+		<form class="form-group">
+			<label class="label" for="basicinput">Availability</label>
+			<select class="form" name="productAvailability" id="productAvailability" required>
+				<option value="">Select</option>
+				<option value="In Stock">In Stock</option>
+				<option value="Out of Stock">Out of Stock</option>
+			</select>
+		</form>
+	
+		<form class="form-group">
+			<label class="label" for="basicinput">Image</label>
+			<input class="form" type="file" name="productImage" id="productImage" value="" required>
+		</form>
+	
+		<form class="form-group" method="POST" onclick="submit()">
+			<button class="submit_btn" type="submit" name="submit">Add</button>
+		</form>
+
+	</div>
+	
+</body>

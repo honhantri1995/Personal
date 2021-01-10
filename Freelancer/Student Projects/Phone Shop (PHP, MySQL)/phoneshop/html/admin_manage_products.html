@@ -1,0 +1,75 @@
+<head>
+  <link rel="stylesheet" href="../admin/css/table_gridview.css" />
+	<link rel="stylesheet" href="../admin/css/btn.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+</head>
+
+<body>
+  <div class="table-container">
+    <table class="table-gridview">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Availability</th>
+        <th>Action</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>iPhone 12 128GB</td>
+        <td>Apple</td>
+        <td>23150000</td>
+        <td>in-stock</td>
+        <td>abcxyz</td>
+        <td>
+          <button class="btn" onclick="location.href='edit_products.php?';"><i class="fa fa-edit"> Edit</i></button>
+          <button class="btn"><i class="fa fa-trash"> Delete</i></button>
+          <a
+            href="delete_products.php?id=<?php echo $row['id']?>&del=delete"
+            onClick="return confirm('Are you sure you want to delete?')"
+          ></a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>iPhone 12 128GB</td>
+        <td>Apple</td>
+        <td>23150000</td>
+        <td>in-stock</td>
+        <td>abcxyz</td>
+        <td>
+          <button class="btn"><i class="fa fa-edit"> Edit</i></button>
+          <a href="edit_products.php?id=<?php echo $row['id']?>"></a>
+          <button class="btn"><i class="fa fa-trash"> Delete</i></button>
+          <a
+            href="delete_products.php?id=<?php echo $row['id']?>&del=delete"
+            onClick="return confirm('Are you sure you want to delete?')"
+          ></a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>iPhone 12 128GB</td>
+        <td>Apple</td>
+        <td>23150000</td>
+        <td>in-stock</td>
+        <td>abcxyz</td>
+        <td>
+          <button class="btn"><i class="fa fa-edit"> Edit</i></button>
+          <a href="edit_products.php?id=<?php echo $row['id']?>"></a>
+          <button class="btn"><i class="fa fa-trash"> Delete</i></button>
+          <a
+            href="delete_products.php?id=<?php echo $row['id']?>&del=delete"
+            onClick="return confirm('Are you sure you want to delete?')"
+          ></a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>

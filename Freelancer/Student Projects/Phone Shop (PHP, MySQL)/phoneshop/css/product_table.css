@@ -1,0 +1,23 @@
+.container {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container table, th, td {
+  border-collapse: collapse;
+  border: 1px solid rgb(185, 177, 177);
+  padding: 10px;
+  text-align: center;
+}
+
+.container table {
+  border-spacing: 15px;
+  background-color: rgb(235, 239, 240);
+}
+
+.container img {
+  width: auto;
+  height: auto;
+  max-width: 220px;
+}
