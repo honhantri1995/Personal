@@ -1,0 +1,13 @@
+# Run 'make' or 'make all' to build executable file
+# Run 'make clean' to remove all object files and executable files
+# Run 'make depend' to use makedepend to automatically generate dependencies (which are added to end of Makefile)
+
+# Define the compiler to use ('gcc' if C, or 'g++' if C++)
+CC = g++
+
+# Define the removing rule (this also overrides the default RM flag of Make)
+RM = rm -f
+
+# Define compiler flags
+#   For example, '-Wall' enables all warnings, '-g' adds debug info, '-std=c++17' uses C++17 standard
+CFLAGS = -Wall -g -std=c++17

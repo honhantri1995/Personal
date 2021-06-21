@@ -1,0 +1,4 @@
+# Datetime, Operation type, execution time (micro-second)
+2021-06-20 08:39:35,Berkeley DB - SELECT,13000.000000
+2021-06-20 08:39:36,Berkeley DB - SELECT,12282.000000
+2021-06-20 08:39:37,Berkeley DB - SELECT,12279.000000

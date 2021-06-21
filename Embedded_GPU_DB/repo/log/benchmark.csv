@@ -1,0 +1,6 @@
+# Datetime, Operation type, execution time (milli-second)
+2021-06-19 04:34:32,SELECT - Mode 1,17.089399
+2021-06-19 04:34:46,SELECT - Mode 1,9.532622
+2021-06-19 04:34:47,SELECT - Mode 1,16.141773
+2021-06-19 04:34:53,SELECT - Mode 1,9.341083
+2021-06-19 04:34:54,SELECT - Mode 1,15.670660

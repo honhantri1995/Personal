@@ -1,0 +1,15 @@
+{
+    "env": {},
+    "configurations": [
+        {
+            "name": "Embedded - GPU DB",
+            "defines": [
+                "DEBUG",
+                "BENCHMARK",
+                "USE_OMNISCI"
+            ],
+            "intelliSenseMode": "linux-gcc-x64",
+        }
+    ],
+    "version": 4
+}

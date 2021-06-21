@@ -1,0 +1,1 @@
+nvcc helloWorld.cu -o helloWorld
